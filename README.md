@@ -6,12 +6,17 @@ To use this device some scripts are needed to enable communication over [GPIO](h
 
 Note: This is only tested on the stock Raspberry Pi OS. Other distributions may work but are untested.
 
-## What this does
+<p align="center">
+<img src="docs/top.jpeg" width="50%"/><img src="docs/side.jpeg" width="50%"/><br/>
+<i>The juice4halt module as it looks when installed on a Raspberry Pi Model 3B+. Note the size of those chunky "BIGCAP" capacitors.</i>
+</p>
+
+## What these scripts do
 1. Triggers automatic safe shutdown on power loss
 1. Handles manual reboots transparently
 1. Lets you monitor the service status
 
-## How it works
+## How they work
 When the Raspberry Pi boots, `systemd` activates the `juice4halt.service` which starts the `watchdog.sh` script. It sends a GPIO pulse to the juice4halt informing it that booting is complete. Then it loops forever, listening for a pulse from the juice4halt, indicating that power has been lost. At this point, the watchdog exits its loop, and initiates a system shutdown.
 
 When a manual reboot is needed (after installing new software, or for any other reason), `systemd` runs the `safe-shutdown.sh` script, as part of the regular shutdown process. This ensures that the juice4halt will be in the correct state on the subsequent boot. If this isn't done, the juice4halt will not operate correctly after the reboot.
