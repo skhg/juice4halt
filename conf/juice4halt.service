@@ -1,0 +1,12 @@
+[Unit]
+Description=juice4halt
+RequiresMountsFor=/home
+
+[Service]
+Type=simple
+RemainAfterExit=true
+ExecStart=/home/pi/juice4halt/bin/watchdog.sh
+ExecStop=/home/pi/juice4halt/bin/safe-shutdown.sh
+
+[Install]
+WantedBy=multi-user.target
