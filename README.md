@@ -1,5 +1,5 @@
 # juice4halt
-systemd scripts for the juice4halt Raspberry Pi module
+systemd configuration for the juice4halt Raspberry Pi module
 
 ## Install
 
