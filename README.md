@@ -2,9 +2,9 @@
 
 [juice4halt](https://juice4halt.com/) is a Raspberry Pi [HAT](https://www.raspberrypi.org/blog/introducing-raspberry-pi-hats/) that acts as a [UPS](https://en.wikipedia.org/wiki/Uninterruptible_power_supply). It uses 2 [supercapacitors](https://en.wikipedia.org/wiki/Supercapacitor) to power the Raspberry Pi for a few seconds, enough time for it to safely shut down in the event of a power failure. 
 
-To use this device some scripts are needed to enable communication over [GPIO](https://www.raspberrypi.org/documentation/usage/gpio/), between the Raspberry Pi and the juice4halt. The official site provides some [here](https://juice4halt.com/getting-started) but in this repo i'm instead using `systemd`.
+To use this device some scripts are needed to enable communication over [GPIO](https://www.raspberrypi.org/documentation/usage/gpio/), between the Raspberry Pi and the juice4halt. The official site provides some [here](https://juice4halt.com/getting-started) but this version uses `systemd` which has some advantages.
 
-Note: This is only tested on the stock Raspberry Pi OS.
+Note: This is only tested on the stock Raspberry Pi OS. Other distributions may work but are untested.
 
 ## What this does
 1. Triggers automatic safe shutdown on power loss
