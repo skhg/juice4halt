@@ -48,3 +48,6 @@ Sample output:
 
 Dec 30 13:24:17 television systemd[1]: Started juice4halt.
 ```
+
+## Credit
+The watchdog and safe-shutdown script are modified from the orginals provided by juice4halt at https://juice4halt.com/download.
