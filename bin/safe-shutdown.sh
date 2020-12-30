@@ -16,4 +16,4 @@ echo "0" > /sys/class/gpio/gpio25/value
 sleep 0.1s
 echo "in" > /sys/class/gpio/gpio25/direction
 
-echo "juice4halt in safe shutdown mode."
+echo "juice4halt in safe shutdown mode. Machine can now be powered off."

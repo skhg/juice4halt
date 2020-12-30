@@ -4,7 +4,7 @@ set -eo pipefail
 
 echo "Starting juice4halt watchdog"
 
-# remove any triggers from previous boots
+# remove any triggers from previous shutdowns
 rm -f /home/pi/juice4halt/.triggered-shutdown
 
 #create directory for working with GPIO and wait
