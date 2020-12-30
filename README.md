@@ -6,7 +6,7 @@ To use this device some scripts are needed to enable communication over [GPIO](h
 
 Note: This is only tested on the stock Raspberry Pi OS.
 
-## What this repo does
+## What this does
 
 ## How to install
 
