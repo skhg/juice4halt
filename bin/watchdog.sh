@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-echo "Starting juice4halt watchdog"
+echo "Starting juice4halt watchdog..."
 
 # remove any triggers from previous shutdowns
 rm -f /home/pi/juice4halt/.triggered-shutdown
@@ -50,7 +50,7 @@ echo "0" > /sys/class/gpio/gpio25/value
 # after system halted the pin will be automatically switched to input and the level will be pulled up to HI
 # a LOW to HI transition signals to the J4H to turn the power off
 
-# set a flag file so that the standard shutdown/reboot script does not communicate over GPIO
+# set a flag file so that the safe-shutdown script does not communicate over GPIO
 touch /home/pi/juice4halt/.triggered-shutdown
 
 echo ""
